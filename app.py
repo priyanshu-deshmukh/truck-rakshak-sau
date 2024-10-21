@@ -30,7 +30,7 @@ def query_db(query, args=(), one=False):
 @app.route('/')
 def index():
     tables = query_db("SELECT name FROM sqlite_master WHERE type='table';")
-    return render_template('home.html', tables=tables)
+    return render_template('index.html', tables=tables)
 
 
 @app.route('/table/<table_name>')
